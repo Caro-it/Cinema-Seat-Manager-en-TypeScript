@@ -1,26 +1,39 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello World with Typescript</title>
+    <title>Cinema Seat Manager</title>
   </head>
-  <body class="min-h-screen bg-slate-100 text-slate-900">
-    <main class="mx-auto flex min-h-screen max-w-2xl flex-col items-center justify-center gap-6 p-6">
-      <h1 class="text-4xl font-bold tracking-tight">Hello World with Typescript</h1>
+  <body class="bg-slate-900 text-slate-100 min-h-screen flex items-center justify-center p-6">
+    <main class="bg-slate-800 rounded-2xl p-8 shadow-xl">
+      <h1 class="text-2xl font-bold mb-6 text-center">Cinema Seat Manager</h1>
 
-      <section class="w-full max-w-md overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
-        <img
-          src="/rigo-baby.jpg"
-          alt="Hello Rigo"
-          class="h-64 w-full bg-slate-50 object-contain p-2"
-        />
-        <div class="p-5">
-          <h2 class="text-xl font-semibold text-slate-900">Hello Rigo</h2>
-          <p id="app" class="mt-2 text-sm text-slate-600"></p>
-        </div>
-      </section>
+      <div class="bg-slate-700 text-center py-2 rounded-lg mb-8 text-sm tracking-widest text-slate-300">
+        PANTALLA
+      </div>
+
+      <div id="mapa-asientos" class="mb-6"></div>
+
+      <div class="flex gap-4 text-xs mb-6">
+        <span class="px-3 py-1 rounded bg-emerald-100 text-emerald-700">L = Libre</span>
+        <span class="px-3 py-1 rounded bg-red-100 text-red-600">X = Ocupado</span>
+        <span class="px-3 py-1 rounded bg-amber-300 text-amber-900">Par contiguo</span>
+      </div>
+
+      <div class="flex gap-3 mb-4">
+        <button id="btn-buscar" class="px-4 py-2 rounded-lg bg-sky-600 hover:bg-sky-500 text-sm font-medium">
+          Buscar dos asientos juntos
+        </button>
+        <button id="btn-reiniciar" class="px-4 py-2 rounded-lg bg-slate-600 hover:bg-slate-500 text-sm font-medium">
+          Reiniciar sala
+        </button>
+      </div>
+
+      <p id="mensaje" class="text-sm text-sky-300 min-h-6">Haz clic en un asiento para reservarlo.</p>
+      <p id="contador" class="text-sm text-slate-400 mt-1"></p>
     </main>
-    <script type="module" src="/src/main.ts"></script>
+
+    <script type="module" src="/src/web.ts"></script>
   </body>
 </html>
